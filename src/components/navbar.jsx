@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
 import "./navbar.css";
 import Logo from "../assets/Logo.svg";
+import CartIcon from "../pages/cart/cart-icon";
 
 export const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbarTitle">
-        <h3>Erica Cyr Shop</h3>
+        <h3>Erica Cyr Merch</h3>
       </div>
       <div className="navbarLogo">
         <img src={Logo} alt="Logo" />
@@ -19,6 +20,7 @@ export const Navbar = () => {
         <Link to="/cart">
           <ShoppingCart size={32} />
         </Link>
+        <CartIcon />
       </div>
     </div>
   );
