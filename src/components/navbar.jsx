@@ -18,7 +18,6 @@ export const Navbar = () => {
       </div>
       <div className="links">
         <Link to="/"> Shop </Link>
-        <Link to="/contact"> Contact </Link>
         <Link to="/cart" className="cart-icon">
           <i className="fas fa-shopping-cart"></i>
           {getTotalCartQuantity() > 0 && (

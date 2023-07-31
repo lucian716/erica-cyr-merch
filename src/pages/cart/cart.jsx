@@ -29,7 +29,7 @@ export const Cart = () => {
 
   return (
     <div className="cart">
-      {totalAmount > 0 ? ( // Display cart items only if cart is not empty
+      {totalAmount > 0 ? ( 
         <div>
           <h1>Your Cart Items</h1>
           <div className="cart-items">
@@ -43,7 +43,9 @@ export const Cart = () => {
           <div className="subtotal-container">
             <div className="checkout">
               <p>Subtotal: ${totalAmount}</p>
-              <button onClick={() => navigate("/")}>Continue Shopping</button>
+               <button onClick={() => navigate("/")} className="continue-shopping-button">
+                Continue Shopping
+              </button>
               <PayPalButton />
             </div>
           </div>
