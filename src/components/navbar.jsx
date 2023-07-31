@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
 import "./navbar.css";
 import Logo from "../assets/Logo.svg";
-import CartIcon from "../pages/cart/cart-icon";
+import { ShopContext } from "../context/shop-context";
 
 export const Navbar = () => {
+  const { getTotalCartQuantity } = useContext(ShopContext);
+
   return (
     <div className="navbar">
       <div className="navbarTitle">
@@ -17,10 +19,12 @@ export const Navbar = () => {
       <div className="links">
         <Link to="/"> Shop </Link>
         <Link to="/contact"> Contact </Link>
-        <Link to="/cart">
-          <ShoppingCart size={32} />
+        <Link to="/cart" className="cart-icon">
+          <i className="fas fa-shopping-cart"></i>
+          {getTotalCartQuantity() > 0 && (
+            <span className="cart-item-count">{getTotalCartQuantity()}</span>
+          )}
         </Link>
-        <CartIcon />
       </div>
     </div>
   );

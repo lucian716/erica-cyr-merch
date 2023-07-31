@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ShoppingCart } from "phosphor-react";
 import { ShopContext } from "../../context/shop-context";
 import { PRODUCTS } from "../../products";
 import { CartItem } from "./cart-item";
@@ -10,17 +9,19 @@ import { PayPalButtons } from "@paypal/react-paypal-js";
 export const Cart = () => {
   const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
-
   const navigate = useNavigate();
 
   const PayPalButton = () => {
     return (
       <PayPalButtons
         createOrder={(data, actions) => {
+          // Function to create the order on PayPal
         }}
         onApprove={(data, actions) => {
+          // Function to handle the successful payment
         }}
         onError={(error) => {
+          // Function to handle payment errors
         }}
       />
     );
@@ -28,7 +29,7 @@ export const Cart = () => {
 
   return (
     <div className="cart">
-      {totalAmount > 0 ? (
+      {totalAmount > 0 ? ( // Display cart items only if cart is not empty
         <div>
           <h1>Your Cart Items</h1>
           <div className="cart-items">
