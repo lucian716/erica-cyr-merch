@@ -17,6 +17,10 @@
   border-radius: 8px;
   padding: 20px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .product img {
@@ -49,9 +53,9 @@
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  max-width: 70%;
-  max-height: 70%;
-  overflow: hidden;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +64,7 @@
 }
 
 .modal-content img {
-  width: 100%;
+  width: 50%;
   height: auto;
   max-height: 100%;
   object-fit: contain;
@@ -72,8 +76,6 @@
   text-align: center;
 }
 
-
-
 .addToCartBttn {
   background-color: transparent;
   color: black;
@@ -81,8 +83,9 @@
   min-width: 100px;
   padding: 5px 10px;
   border-radius: 15px;
-  align-items: center;
-  text-align: center;
+  display: flex; /* Display as flex container */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
 }
 
 
