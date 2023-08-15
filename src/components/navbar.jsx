@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <div className="navbar">
-      <Link to="/" className="navbarTitle">
+      <Link to="/admin/login" className="navbarTitle">
         <h3>Erica Cyr Merch</h3>
       </Link>
       <div className="navbarLogo">
