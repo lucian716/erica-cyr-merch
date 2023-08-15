@@ -1,0 +1,26 @@
+import React from "react";
+import "./contact.css";
+
+export const Contact = () => {
+  return (
+    <div className="contact">
+      <h1>Contact Us</h1>
+      <p>
+        If you have any questions or inquiries, feel free to reach out to us:
+      </p>
+      <div className="contact-info">
+        <p>By Email: example@example.com</p>
+        <p className="insta">
+          DM on Instagram:{" "}
+          <a
+            href="https://www.instagram.com/ericacyrtattoos/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Erica Cyr Tattoos
+          </a>
+        </p>
+      </div>
+    </div>
+  );
+};
