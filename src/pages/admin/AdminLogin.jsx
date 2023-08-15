@@ -12,7 +12,7 @@ const handleLogin = async (e) => {
   e.preventDefault();
 
   const adminUsername = "admin";
-  const adminPasswordHash = await bcrypt.hash("adminpassword123", 10); 
+  const adminPasswordHash = await bcrypt.hash("admin123", 10); 
 
   if (
     username === adminUsername &&

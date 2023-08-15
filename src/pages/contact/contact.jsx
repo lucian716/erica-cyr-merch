@@ -9,7 +9,7 @@ export const Contact = () => {
         If you have any questions or inquiries, feel free to reach out to us:
       </p>
       <div className="contact-info">
-        <p>By Email: example@example.com</p>
+        <p>By Email: ericadcyr@gmail.com</p>
         <p className="insta">
           DM on Instagram:{" "}
           <a
