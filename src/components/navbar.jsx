@@ -10,11 +10,14 @@ export const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="navbarTitle">
+      <Link to="/" className="navbarTitle">
         <h3>Erica Cyr Merch</h3>
-      </div>
+      </Link>
       <div className="navbarLogo">
-        <img src={Logo} alt="Logo" />
+        <Link to="/">
+          {" "}
+          <img src={Logo} alt="Logo" />
+        </Link>
       </div>
       <div className="links">
         <Link to="/"> Shop </Link>
