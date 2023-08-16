@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import bcrypt from "bcrypt";
 
 const AdminLogin = () => {
   const [username, setUsername] = useState("");
@@ -7,18 +8,21 @@ const AdminLogin = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+const handleLogin = async (e) => {
+  e.preventDefault();
 
-    const adminUsername = "admin";
-    const adminPassword = "admin123";
+  const adminUsername = "admin";
+  const adminPasswordHash = await bcrypt.hash("admin123", 10); 
 
-    if (username === adminUsername && password === adminPassword) {
-      navigate("/admin/dashboard");
-    } else {
-      setErrorMessage("Invalid username or password");
-    }
-  };
+  if (
+    username === adminUsername &&
+    (await bcrypt.compare(password, adminPasswordHash))
+  ) {
+    history.push("/admin/dashboard");
+  } else {
+    setErrorMessage("Invalid username or password");
+  }
+};
 
   return (
     <div className="admin-login">
