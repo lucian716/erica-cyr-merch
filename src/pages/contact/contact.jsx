@@ -4,12 +4,12 @@ import "./contact.css";
 export const Contact = () => {
   return (
     <div className="contact">
-      <h1>Contact Us</h1>
+      <h1>Contact</h1>
       <p>
-        If you have any questions or inquiries, feel free to reach out to us:
+        If you have any questions or inquiries, feel free to reach out:
       </p>
       <div className="contact-info">
-        <p>By Email: example@example.com</p>
+        <p>By Email: ericadcyr@gmail.com</p>
         <p className="insta">
           DM on Instagram:{" "}
           <a
