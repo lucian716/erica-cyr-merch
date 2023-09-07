@@ -29,5 +29,16 @@ function App() {
   );
 }
 
-export default App;
+export default function WrappedApp() {
+  return (
+    <PayPalScriptProvider
+      options={{
+        "client-id": "YOUR_PAYPAL_CLIENT_ID", // Replace with your actual PayPal client ID
+        // ... other PayPal options
+      }}
+    >
+      <App />
+    </PayPalScriptProvider>
+  );
+}
 
